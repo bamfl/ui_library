@@ -4,3 +4,22 @@
     box-sizing: border-box;
 }
 
+.red {
+	color: red;
+}
+
+.big {
+	font-size: 50px;
+}
+
+.btn {
+	width: 150px;
+	height: 40;
+	background-color:lightblue;
+}
+
+.btn.active {
+	font-size: 18px;
+	background-color: green;
+	color: #fff;
+}
