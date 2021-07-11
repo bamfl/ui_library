@@ -32,4 +32,5 @@ $('.btn').eq(2).click(function() {
 // console.log($('div').eq(0).find('.some'));
 // console.log($('.some').closest('.findme'));
 
-console.log($('.findme').siblings());
+$('.btn').fadeOut(2000);
+// $('.btn').fadeIn(2000);
