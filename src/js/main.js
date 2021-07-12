@@ -25,3 +25,5 @@ $('.wrap').html(`
 `);
 
 $('.dropdown-toggle').dropdown();
+$('[data-showmodal-id]').modalOpen();
+$('[data-close]').modalClose();

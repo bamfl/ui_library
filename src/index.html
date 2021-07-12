@@ -26,19 +26,71 @@
 				</ul>
 			</div>
 
-			<!-- Dropdown menu -->
-			<div class="dropdown m20">
-				<button class="btn btn-success dropdown-toggle" id="dropdownMenuButton2">Открыть dropdown меню</button>
+			<!-- Dropdown menu из main.js-->
+			<div class="wrap"></div>
 
-				<ul class="dropdown-menu" data-toggle-id="dropdownMenuButton2">
-					<li><a href="#" class="dropdown-item">Пункт 1</a></li>
-					<li><a href="#" class="dropdown-item">Пункт 2</a></li>
-					<li><a href="#" class="dropdown-item">Пункт 3</a></li>
-				</ul>
+			<div class="goods d-flex">
+				<!-- Card -->
+				<div class="card m10">
+					<img class="card-img" src="https://media.istockphoto.com/photos/the-product-range-of-coca-cola-picture-id458428289?s=612x612" alt="photo">
+					<div class="card-body">
+						<div class="card-title">Card title 1</div>
+						<p class="card-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio totam, eos quasi rerum quod facilis maiores earum at facere.
+						</p>
+						<a href="#" class="btn btn-success btn-card" data-showmodal-id="modal1">Buy1</a>
+					</div>
+				</div>
+	
+				<!-- Card -->
+				<div class="card m10">
+					<img class="card-img" src="https://media.istockphoto.com/photos/the-product-range-of-coca-cola-picture-id458428289?s=612x612" alt="photo">
+					<div class="card-body">
+						<div class="card-title">Card title 2</div>
+						<p class="card-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio totam, eos quasi rerum quod facilis maiores earum at facere.
+						</p>
+						<Buy href="#" class="btn btn-success btn-card" data-showmodal-id="modal2">Buy2</a>
+					</div>
+				</div>
 			</div>
 
-			<div class="wrap">
-				
+			<!-- Modal -->
+			<div class="modal" id="modal1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<button class="close" data-close><span>&times;</span></button>
+						<div class="modal-header">
+							<div class="modal-title">Modal title 1</div>
+							<div class="modal-body">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate a modi, nisi magnam odit atque exercitationem eligendi doloribus? Quidem, reprehenderit.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-success mr-20">Save changes</button>
+								<button class="btn btn-danger" data-close>Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal" id="modal2">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<button class="close" data-close><span>&times;</span></button>
+						<div class="modal-header">
+							<div class="modal-title">Modal title 2</div>
+							<div class="modal-body">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-success mr-20">Save changes</button>
+								<button class="btn btn-danger" data-close>Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
