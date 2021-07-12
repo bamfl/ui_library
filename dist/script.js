@@ -492,6 +492,34 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dura
   return this;
 };
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (duration, display, final) {
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      this[i].style.display = display || 'block';
+
+      const _fadeToggle = complection => {
+        this[i].style.opacity = complection;
+      };
+
+      const animate = this.animateOverTime(duration, _fadeToggle, final);
+      requestAnimationFrame(animate);
+    } else {
+      const _fadeOut = complection => {
+        this[i].style.opacity = 1 - complection;
+
+        if (complection === 1) {
+          this[i].style.display = 'none';
+        }
+      };
+
+      const animate = this.animateOverTime(duration, _fadeOut, final);
+      requestAnimationFrame(animate);
+    }
+  }
+
+  return this;
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/handlers.js":
@@ -555,32 +583,15 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/lib */ "./src/js/lib/lib.js");
 
-$('.active').show().hide().toggleDisplay();
-$('.active').addClass('red', 'big').removeClass('active').toggleClass('active');
-
-const clicked = () => {
-  $('.active').toggleClass('clicked');
-};
-
-$('.active').on('click', clicked);
-$('.active').off('click', clicked);
-$('.active').click(clicked);
-$('.btn').on('click', function () {
-  $(this).toggleClass('active');
+$('#first').click(() => {
+  $('div').eq(2).fadeToggle(800);
 });
-$('.btn').setAttr('myattr', 10);
-$('.btn').removeAttr('myattr', 10); // console.log($('.btn').html()); // Нажми на меня!
-
-$('.btn').eq(0).html(`<h1>Hi</h1>`);
-$('.btn').eq(1).click(function () {
-  $(this).hide();
+$('[data-count="second"]').click(() => {
+  $('div').eq(3).fadeToggle(800);
 });
-$('.btn').eq(2).click(function () {
-  console.log($(this).index());
-}); // console.log($('div').eq(0).find('.some'));
-// console.log($('.some').closest('.findme'));
-
-$('.btn').fadeOut(2000); // $('.btn').fadeIn(2000);
+$('.btn').eq(2).on('click', () => {
+  $('.w-500').fadeToggle(800);
+});
 
 /***/ })
 
