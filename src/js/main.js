@@ -11,3 +11,17 @@ $('[data-count="second"]').click(() => {
 $('.btn').eq(2).on('click', () => {
 	$('.w-500').fadeToggle(800);
 });
+
+$('.wrap').html(`
+	<div class="dropdown m20">
+	<button class="btn btn-success dropdown-toggle" id="dropdownMenuButton3">Открыть dropdown меню</button>
+
+	<ul class="dropdown-menu" data-toggle-id="dropdownMenuButton3">
+		<li><a href="#" class="dropdown-item">Пункт 1</a></li>
+		<li><a href="#" class="dropdown-item">Пункт 2</a></li>
+		<li><a href="#" class="dropdown-item">Пункт 3</a></li>
+	</ul>
+	</div>
+`);
+
+$('.dropdown-toggle').dropdown();
