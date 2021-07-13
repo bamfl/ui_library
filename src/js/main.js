@@ -25,5 +25,26 @@ $('.wrap').html(`
 `);
 
 $('.dropdown-toggle').dropdown();
-$('[data-showmodal-id]').modalOpen();
-$('[data-close]').modalClose();
+
+// $('[data-showmodal-id]').modalOpen();
+// $('[data-close]').modalClose();
+
+$('.btn-card').eq(0).click(() => {
+	$('.btn-card').eq(0).createModal({
+		text: {
+			title: 'Modal title 1',
+			body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate a modi, nisi magnam odit atque exercitationem eligendi doloribus? Quidem, reprehenderit.'
+		},
+		btns: {
+			count: 2,
+			settings: [
+				[ 'Save changes', ['btn-success', 'mr-20'], false ],
+				[ 'Close', ['btn-danger'], true ],
+				() => {
+					alert('Данные сохранены');
+				}
+			]
+		}
+	});
+});
+
