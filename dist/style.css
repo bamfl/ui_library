@@ -179,6 +179,42 @@
 .modal-body {
   margin: 10px 0px 15px; }
 
+.tab {
+  max-width: 700px; }
+
+.tab-panel {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px 4px 0 0; }
+
+.tab-item {
+  font-size: 18px;
+  line-height: 27px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  flex: 1 1 auto;
+  text-align: center; }
+
+.tab-item:last-child {
+  border-right: none; }
+
+.tab-content {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
+  padding: 20px;
+  border-top: none;
+  border-radius: 0 0 4px 4px; }
+
+.tab-item--active {
+  background-color: #9DC88D; }
+
+.tab-content--active {
+  display: block; }
+
 .text-center {
   text-align: center; }
 
