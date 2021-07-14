@@ -1,11 +1,11 @@
 import './lib/lib';
 
 $('#first').click(() => {
-	$('div').eq(2).fadeToggle(800);
+	$('div').eq(3).fadeToggle(800);
 });
 
 $('[data-count="second"]').click(() => {
-	$('div').eq(3).fadeToggle(800);
+	$('div').eq(4).fadeToggle(800);
 });
 
 $('.btn').eq(2).on('click', () => {
@@ -48,3 +48,10 @@ $('[data-close]').modalClose();
 // 	});
 // });
 
+
+// $().get('https://jsonplaceholder.typicode.com/todos/1')
+// 	.then(res => console.log(res));
+
+
+$().post('https://jsonplaceholder.typicode.com/posts', JSON.stringify({name: 'Dima'}))
+	.then(json => console.log(json));
